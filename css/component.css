@@ -142,19 +142,19 @@ a:hover {
 }
 
 .bl-icon-about:before {
-	content: "\e000";
+	content: "\e601";
 }
 
 .bl-icon-works:before {
-	content: "\e001";
+	content: "\e603";
 }
 
 .bl-icon-blog:before {
-	content: "\e002";
+	content: "\e600";
 }
 
 .bl-icon-contact:before {
-	content: "\e003";
+	content: "\e602";
 }
 
 .bl-main > section .bl-icon-close {
@@ -168,7 +168,7 @@ a:hover {
 }
 
 .bl-icon-close:before {
-	content: "\e005";
+	content: "\e604";
 }
 
 .bl-content, 
