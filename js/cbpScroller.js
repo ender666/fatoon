@@ -82,7 +82,7 @@
 			// If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
 			viewportFactor : 0.2
 		},
-		_init : function() {
+		_init : function(e) {
 			if( Modernizr.touch ) return;
 			this.sections = Array.prototype.slice.call( this.el.querySelectorAll( '.cbp-so-section' ) );
 			this.didScroll = false;
@@ -95,13 +95,13 @@
 				}
 			} );
 
-			var scrollHandler = function() {
+			var scrollHandler = function(e) {
 					if( !self.didScroll ) {
 						self.didScroll = true;
 						setTimeout( function() { self._scrollPage(); }, 60 );
 					}
 				},
-				resizeHandler = function() {
+				resizeHandler = function(e) {
 					function delayed() {
 						self._scrollPage();
 						self.resizeTimeout = null;
@@ -115,7 +115,7 @@
 			window.addEventListener( 'scroll', scrollHandler, false );
 			window.addEventListener( 'resize', resizeHandler, false );
 		},
-		_scrollPage : function() {
+		_scrollPage : function(e) {
 			var self = this;
 
 			this.sections.forEach( function( el, i ) {
